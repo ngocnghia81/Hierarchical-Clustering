@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
-import cv2
-import numpy as np
 from clustering import hierarchical_clustering
 from werkzeug.utils import secure_filename
 from asgiref.wsgi import WsgiToAsgi

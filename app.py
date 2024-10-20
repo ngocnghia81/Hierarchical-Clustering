@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
-from clustering import hierarchical_clustering
+
 from werkzeug.utils import secure_filename
-from asgiref.wsgi import WsgiToAsgi
+
+from clustering import hierarchical_clustering
 
 
 app = Flask(__name__)
@@ -50,10 +51,8 @@ def upload_file():
     return render_template('index.html')
 
 
-asgi_app = WsgiToAsgi(app)
 
 # Chạy server
 if __name__ == '__main__':
     app.run(debug=True)
-    asgi_app = WsgiToAsgi(app)
 
